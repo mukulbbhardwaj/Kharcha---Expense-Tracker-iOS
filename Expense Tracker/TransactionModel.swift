@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct Transction:Identifiable{
+struct Transaction:Identifiable{
     let id:         Int
     let date:       String
     let instituion: String
@@ -20,6 +20,9 @@ struct Transction:Identifiable{
     var isTransfer:Bool
     var isExpense:Bool
     var isEdited:Bool
+    var dateParsed:Date{
+        date.dateParsed()
+    }
 }
 enum TransactionType:String{
     case debit = "debit"
